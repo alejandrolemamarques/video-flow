@@ -4,9 +4,26 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/png" href="./video-flow-logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <meta name="color-scheme" content="dark light" />
         <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#f3f4f6" media="(prefers-color-scheme: light)" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <script>
+            try {
+                var storedTheme = localStorage.getItem("videoFlowCanvasTheme");
+                var bootColor =
+                    storedTheme === "light" ? "#f3f4f6" : "#000000";
+                var bootTheme = storedTheme === "light" ? "light" : "dark";
+                document.documentElement.style.backgroundColor = bootColor;
+                document.documentElement.dataset.flowTheme = bootTheme;
+                var defaultMeta = document.querySelector(
+                    'meta[name="theme-color"]:not([media])'
+                );
+                if (defaultMeta) defaultMeta.content = bootColor;
+            } catch (e) {}
+        </script>
         <meta name="apple-mobile-web-app-title" content="Video Map" />
         <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
         <title>Video Mental Map</title>
@@ -51,7 +68,7 @@
             property="twitter:image"
             content="https://alejandrolemamarques.github.io/video-flow/video-mental-map-logo.png"
         />
-      <script type="module" crossorigin src="/video-flow/assets/index-DrsMPeyT.js"></script>
+      <script type="module" crossorigin src="/video-flow/assets/index-DGKmeWwk.js"></script>
       <link rel="stylesheet" crossorigin href="/video-flow/assets/index-CK0uH52X.css">
     <link rel="manifest" href="/video-flow/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/video-flow/registerSW.js"></script></head>
     <body>
