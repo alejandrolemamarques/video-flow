@@ -2,6 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <!-- YouTube's embedded player refuses to load when the Referer
+             header is missing. Phones and installed home-screen apps often
+             drop it unless the page asks for it. This sends the site origin
+             only, not the full page address. -->
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
         <link rel="icon" type="image/png" href="./video-flow-logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <meta name="color-scheme" content="light" />
@@ -68,8 +73,8 @@
             property="twitter:image"
             content="https://alejandrolemamarques.github.io/video-flow/video-mental-map-logo.png"
         />
-      <script type="module" crossorigin src="/video-flow/assets/index-qfiQbCdq.js"></script>
-      <link rel="stylesheet" crossorigin href="/video-flow/assets/index-ai4SqUja.css">
+      <script type="module" crossorigin src="/video-flow/assets/index-CnL3WFtO.js"></script>
+      <link rel="stylesheet" crossorigin href="/video-flow/assets/index-CV1nasbk.css">
     <link rel="manifest" href="/video-flow/manifest.webmanifest"></head>
     <body>
         <div id="root"></div>
